@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Video Preview</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      #video {
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <video controls="controls" id="video"
+        style="width: 100vw; height: 100vh;">
+    </video>
+    
+  </body>
+</html>
+
+
+<script>
+  const video = document.getElementById('video');
+
+  let src = location.hash.substring(1);
+
+  video.src = src;
+</script>
